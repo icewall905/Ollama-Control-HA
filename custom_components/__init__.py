@@ -1,4 +1,4 @@
-"""The OpenAI Conrtrol integration."""
+"""The Ollama Conrtrol integration."""
 from __future__ import annotations
 
 import json
@@ -43,8 +43,7 @@ entity_template = Template(ENTITY_TEMPLATE)
 prompt_template = Template(PROMPT_TEMPLATE)
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    """Set up OpenAI Agent from a config entry."""
-    openai.api_base = LITELLM_ENDPOINT
+    """Set up Ollama Agent from a config entry."""
     openai.api_base = LITELLM_ENDPOINT
     openai.api_key = entry.data[CONF_API_KEY]
 
@@ -247,9 +246,9 @@ class OpenAIAgent(conversation.AbstractConversationAgent):
             try:
                 json_response = json.loads(json_string)
             except json.JSONDecodeError as err:
-                _LOGGER.error('Error on second parsing of JSON message from OpenAI %s', err)
+                _LOGGER.error('Error on second parsing of JSON message from Ollama %s', err)
         else:
-            _LOGGER.error('Error on second extraction of JSON message from OpenAI, %s', content)
+            _LOGGER.error('Error on second extraction of JSON message from Ollama, %s', content)
 
         # only operate on JSON actions if JSON was extracted
         if json_response is not None:
