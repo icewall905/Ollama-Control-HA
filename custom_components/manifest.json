@@ -1,0 +1,15 @@
+{
+    "name": "Ollama Control",
+    "description": "Connects to Ollama Conversation using a LiteLLM proxy to control Home Assistant",
+    "version": "0.0.1",
+    "domain": "ollama_control",
+    "requirements": ["requests"],
+    "platform": "smarthome",
+    "auth": {
+      "api_key": {
+        "name": "Ollama Conversation API Key",
+        "required": false
+      }
+    }
+  }
+  
