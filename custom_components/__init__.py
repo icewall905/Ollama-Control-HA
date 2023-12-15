@@ -34,7 +34,8 @@ from .const import (
     DEFAULT_TOP_P,
     ENTITY_TEMPLATE,
     PROMPT_TEMPLATE,
-    LITELLM_ENDPOINT
+    LITELLM_ENDPOINT,
+    CONF_API_KEY,
 )
 
 _LOGGER = logging.getLogger(__name__)
