@@ -38,11 +38,11 @@ from .const import (
 
 _LOGGER = logging.getLogger(__name__)
 
-STEP_USER_DATA_SCHEMA = vol.Schema(
-    {
-        vol.Required(CONF_API_KEY): str,
-    }
-)
+#STEP_USER_DATA_SCHEMA = vol.Schema(
+#    {
+#        vol.Required(CONF_API_KEY): str,
+#    }
+#)
 
 DEFAULT_OPTIONS = types.MappingProxyType(
     {
