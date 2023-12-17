@@ -5,6 +5,10 @@
     "domain": "ollama_control",
     "requirements": ["requests"],
     "platform": "smarthome",
+    "codeowners": [],
+    "dependencies": [],
+    "documentation": "https://github.com/icewall905/Ollama-Control-HA",
+    "issue_tracker": "https://github.com/icewall905/Ollama-Control-HA/issues",
     "auth": {
       "api_key": {
         "name": "Ollama Conversation API Key",
