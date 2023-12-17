@@ -21,15 +21,15 @@ jobs:
         shell: "bash"
         run: |
           yq -i -o json '.version="${{ github.event.release.tag_name }}"' \
-            "${{ github.workspace }}/custom_components/ollama_control/manifest.json"
+            "${{ github.workspace }}/custom_components/ollama-control/manifest.json"
 
       - name: "ZIP the integration directory"
         shell: "bash"
         run: |
-          cd "${{ github.workspace }}/custom_components/ollama_control"
+          cd "${{ github.workspace }}/custom_components/ollama-control"
           zip ollama_control.zip -r ./
 
       - name: "Upload the ZIP file to the release"
         uses: softprops/action-gh-release@v0.1.15
         with:
-          files: ${{ github.workspace }}/custom_components/ollama_control/ollama_control.zip
+          files: ${{ github.workspace }}/custom_components/ollama-control/ollama_control.zip
